@@ -49,6 +49,23 @@ function ProductScreen() {
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
+
+                            <ListGroup.Item>
+                                <Row>
+                                    <Col>Status:</Col>
+                                    <Col>
+                                        {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
+                                    </Col>
+                                </Row>
+                            </ListGroup.Item>
+
+                            <ListGroup.Item className="d-flex justify-content-center">
+                                <div style={{ maxWidth: '200px', width: '100%' }}>
+                                <Button disabled={product.countInStock === 0} type='button' style={{ width: '100%' }}>Add to Cart</Button>
+                                </div>
+                            </ListGroup.Item>
+
+
                         </ListGroup>
                     </Card>
                 </Col>
